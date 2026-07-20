@@ -1,0 +1,101 @@
+{
+  "name": "BlogPost",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "title": "Title"
+    },
+    "slug": {
+      "type": "string",
+      "title": "URL Slug"
+    },
+    "excerpt": {
+      "type": "string",
+      "title": "Excerpt"
+    },
+    "content": {
+      "type": "string",
+      "title": "Content (Markdown)"
+    },
+    "category": {
+      "type": "string",
+      "title": "Category",
+      "enum": [
+        "Industry Trends",
+        "How-To Guides",
+        "Company News",
+        "Technical Tips"
+      ]
+    },
+    "tags": {
+      "type": "array",
+      "title": "Tags",
+      "items": {
+        "type": "string"
+      }
+    },
+    "cover_image": {
+      "type": "string",
+      "title": "Cover Image URL"
+    },
+    "author": {
+      "type": "string",
+      "title": "Author",
+      "default": "Iowa Structure Cabling Team"
+    },
+    "published": {
+      "type": "boolean",
+      "title": "Published",
+      "default": false
+    },
+    "published_date": {
+      "type": "string",
+      "format": "date",
+      "title": "Published Date"
+    },
+    "read_time": {
+      "type": "string",
+      "title": "Read Time"
+    },
+    "meta_description": {
+      "type": "string",
+      "title": "Meta Description (SEO)"
+    }
+  },
+  "required": [
+    "title",
+    "slug",
+    "excerpt",
+    "content"
+  ],
+  "rls": {
+    "create": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "read": {
+      "$or": [
+        {
+          "data.published": true
+        },
+        {
+          "user_condition": {
+            "role": "admin"
+          }
+        }
+      ]
+    },
+    "update": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "delete": {
+      "user_condition": {
+        "role": "admin"
+      }
+    }
+  }
+}

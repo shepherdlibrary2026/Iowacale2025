@@ -1,0 +1,46 @@
+{
+  "name": "Subscriber",
+  "type": "object",
+  "properties": {
+    "email": {
+      "type": "string",
+      "format": "email",
+      "title": "Email Address"
+    },
+    "name": {
+      "type": "string",
+      "title": "Name"
+    },
+    "source": {
+      "type": "string",
+      "title": "Source",
+      "default": "Careers Page"
+    },
+    "description": {
+      "type": "string",
+      "title": "Description",
+      "maxLength": 1000
+    }
+  },
+  "required": [
+    "email"
+  ],
+  "rls": {
+    "create": {},
+    "read": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "update": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "delete": {
+      "user_condition": {
+        "role": "admin"
+      }
+    }
+  }
+}

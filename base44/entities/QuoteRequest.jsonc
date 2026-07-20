@@ -1,0 +1,98 @@
+{
+  "name": "QuoteRequest",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "title": "Full Name"
+    },
+    "company": {
+      "type": "string",
+      "title": "Company Name"
+    },
+    "email": {
+      "type": "string",
+      "format": "email",
+      "title": "Email"
+    },
+    "phone": {
+      "type": "string",
+      "title": "Phone"
+    },
+    "project_address": {
+      "type": "string",
+      "title": "Project Address"
+    },
+    "service_type": {
+      "type": "string",
+      "title": "Type of Service",
+      "enum": [
+        "Structured Cabling Install",
+        "CAT6 / CAT6A Drops",
+        "Fiber Runs & Terminations",
+        "Patch Panels & Rack Cleanup",
+        "Network Closet Buildout",
+        "Wi-Fi AP Installation",
+        "Camera / CCTV Prewire",
+        "Low-Voltage MAC Work",
+        "Other"
+      ]
+    },
+    "timeline": {
+      "type": "string",
+      "title": "Project Timeline",
+      "enum": [
+        "Immediately",
+        "Within 2 weeks",
+        "Within 1 month",
+        "1-3 months",
+        "Planning stage"
+      ]
+    },
+    "description": {
+      "type": "string",
+      "title": "Project Description"
+    },
+    "attachments": {
+      "type": "array",
+      "title": "Plans / Photos",
+      "items": {
+        "type": "string",
+        "format": "file_uri"
+      }
+    },
+    "notes": {
+      "type": "string",
+      "title": "Internal Notes"
+    },
+    "status": {
+      "type": "string",
+      "title": "Status",
+      "enum": [
+        "New",
+        "Contacted",
+        "Quoted",
+        "Won",
+        "Lost"
+      ],
+      "default": "New"
+    }
+  },
+  "required": [
+    "name",
+    "email",
+    "phone"
+  ],
+  "rls": {
+    "create": {},
+    "read": {
+      "created_by": "{{user.email}}"
+    },
+    "update": {
+      "created_by": "{{user.email}}"
+    },
+    "delete": {
+      "created_by": "{{user.email}}"
+    }
+  }
+}

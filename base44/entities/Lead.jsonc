@@ -1,0 +1,103 @@
+{
+  "name": "Lead",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "title": "Full Name"
+    },
+    "company": {
+      "type": "string",
+      "title": "Company Name"
+    },
+    "email": {
+      "type": "string",
+      "format": "email",
+      "title": "Email"
+    },
+    "phone": {
+      "type": "string",
+      "title": "Phone"
+    },
+    "service_type": {
+      "type": "string",
+      "title": "Service Type",
+      "enum": [
+        "Structured Cabling Install",
+        "CAT6 / CAT6A Drops",
+        "Fiber Runs & Terminations",
+        "Patch Panels & Rack Cleanup",
+        "Network Closet Buildout",
+        "Wi-Fi AP Installation",
+        "Camera / CCTV Prewire",
+        "Low-Voltage MAC Work",
+        "Other"
+      ]
+    },
+    "square_footage": {
+      "type": "string",
+      "title": "Square Footage",
+      "enum": [
+        "Under 2,000 sq ft",
+        "2,000\u20135,000 sq ft",
+        "5,000\u201315,000 sq ft",
+        "15,000\u201350,000 sq ft",
+        "50,000+ sq ft"
+      ]
+    },
+    "timeline": {
+      "type": "string",
+      "title": "Project Timeline",
+      "enum": [
+        "Immediately",
+        "Within 2 weeks",
+        "Within 1 month",
+        "1\u20133 months",
+        "Planning stage"
+      ]
+    },
+    "infrastructure_status": {
+      "type": "string",
+      "title": "Current Infrastructure Status",
+      "enum": [
+        "New construction \u2014 no cabling yet",
+        "Existing cabling \u2014 needs upgrade",
+        "Partial \u2014 some cabling in place",
+        "Unknown / Need assessment"
+      ]
+    },
+    "notes": {
+      "type": "string",
+      "title": "Additional Notes"
+    },
+    "status": {
+      "type": "string",
+      "title": "Lead Status",
+      "enum": [
+        "New",
+        "Contacted",
+        "Quoted",
+        "Won",
+        "Lost"
+      ],
+      "default": "New"
+    }
+  },
+  "required": [
+    "name",
+    "email",
+    "phone"
+  ],
+  "rls": {
+    "create": {},
+    "read": {
+      "created_by": "{{user.email}}"
+    },
+    "update": {
+      "created_by": "{{user.email}}"
+    },
+    "delete": {
+      "created_by": "{{user.email}}"
+    }
+  }
+}

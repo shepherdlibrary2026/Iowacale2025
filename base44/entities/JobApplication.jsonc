@@ -1,0 +1,301 @@
+{
+  "name": "JobApplication",
+  "type": "object",
+  "properties": {
+    "firstName": {
+      "type": "string",
+      "title": "First Name"
+    },
+    "lastName": {
+      "type": "string",
+      "title": "Last Name"
+    },
+    "email": {
+      "type": "string",
+      "title": "Email"
+    },
+    "phone": {
+      "type": "string",
+      "title": "Phone"
+    },
+    "address": {
+      "type": "string",
+      "title": "Street Address"
+    },
+    "city": {
+      "type": "string",
+      "title": "City"
+    },
+    "state": {
+      "type": "string",
+      "title": "State"
+    },
+    "zip": {
+      "type": "string",
+      "title": "ZIP Code"
+    },
+    "positionApplied": {
+      "type": "string",
+      "title": "Position Applied For"
+    },
+    "desiredPay": {
+      "type": "string",
+      "title": "Desired Pay"
+    },
+    "availableStart": {
+      "type": "string",
+      "title": "Available Start Date"
+    },
+    "employmentType": {
+      "type": "string",
+      "title": "Employment Type"
+    },
+    "authorizedToWork": {
+      "type": "string",
+      "title": "Authorized to Work in US"
+    },
+    "requireSponsorship": {
+      "type": "string",
+      "title": "Requires Sponsorship"
+    },
+    "everWorkedHere": {
+      "type": "string",
+      "title": "Previously Employed Here"
+    },
+    "everWorkedHereDetails": {
+      "type": "string",
+      "title": "Previous Employment Details"
+    },
+    "highestEducation": {
+      "type": "string",
+      "title": "Highest Education"
+    },
+    "schoolName": {
+      "type": "string",
+      "title": "School Name"
+    },
+    "fieldOfStudy": {
+      "type": "string",
+      "title": "Field of Study"
+    },
+    "graduationYear": {
+      "type": "string",
+      "title": "Graduation Year"
+    },
+    "yearsExperience": {
+      "type": "string",
+      "title": "Years of Experience"
+    },
+    "currentEmployer": {
+      "type": "string",
+      "title": "Current Employer"
+    },
+    "currentTitle": {
+      "type": "string",
+      "title": "Current Title"
+    },
+    "currentPay": {
+      "type": "string",
+      "title": "Current Pay"
+    },
+    "reasonForLeaving": {
+      "type": "string",
+      "title": "Reason for Leaving"
+    },
+    "priorEmployer": {
+      "type": "string",
+      "title": "Prior Employer"
+    },
+    "priorTitle": {
+      "type": "string",
+      "title": "Prior Title"
+    },
+    "priorDates": {
+      "type": "string",
+      "title": "Prior Employment Dates"
+    },
+    "priorReason": {
+      "type": "string",
+      "title": "Prior Reason for Leaving"
+    },
+    "certifications": {
+      "type": "string",
+      "title": "Certifications"
+    },
+    "tools": {
+      "type": "string",
+      "title": "Tools & Equipment"
+    },
+    "driversLicense": {
+      "type": "string",
+      "title": "Driver's License"
+    },
+    "cdl": {
+      "type": "string",
+      "title": "CDL"
+    },
+    "ownVehicle": {
+      "type": "string",
+      "title": "Own Vehicle"
+    },
+    "availableDays": {
+      "type": "array",
+      "title": "Available Days",
+      "items": {
+        "type": "string"
+      }
+    },
+    "hoursPerWeek": {
+      "type": "string",
+      "title": "Hours Per Week"
+    },
+    "willingToTravel": {
+      "type": "string",
+      "title": "Willing to Travel"
+    },
+    "convictionRecord": {
+      "type": "string",
+      "title": "Conviction Record"
+    },
+    "convictionDetails": {
+      "type": "string",
+      "title": "Conviction Details"
+    },
+    "militaryService": {
+      "type": "string",
+      "title": "Military Service"
+    },
+    "militaryBranch": {
+      "type": "string",
+      "title": "Military Branch"
+    },
+    "militaryDates": {
+      "type": "string",
+      "title": "Military Dates"
+    },
+    "militaryRank": {
+      "type": "string",
+      "title": "Military Rank"
+    },
+    "honorableDischarge": {
+      "type": "string",
+      "title": "Honorable Discharge"
+    },
+    "ref1Name": {
+      "type": "string",
+      "title": "Reference 1 Name"
+    },
+    "ref1Relation": {
+      "type": "string",
+      "title": "Reference 1 Relationship"
+    },
+    "ref1Phone": {
+      "type": "string",
+      "title": "Reference 1 Phone"
+    },
+    "ref2Name": {
+      "type": "string",
+      "title": "Reference 2 Name"
+    },
+    "ref2Relation": {
+      "type": "string",
+      "title": "Reference 2 Relationship"
+    },
+    "ref2Phone": {
+      "type": "string",
+      "title": "Reference 2 Phone"
+    },
+    "gender": {
+      "type": "string",
+      "title": "Gender (Voluntary)"
+    },
+    "race": {
+      "type": "string",
+      "title": "Race/Ethnicity (Voluntary)"
+    },
+    "veteranStatus": {
+      "type": "string",
+      "title": "Veteran Status (Voluntary)"
+    },
+    "disabilityStatus": {
+      "type": "string",
+      "title": "Disability Status (Voluntary)"
+    },
+    "hearAboutUs": {
+      "type": "string",
+      "title": "How They Heard About Us"
+    },
+    "additionalInfo": {
+      "type": "string",
+      "title": "Additional Information"
+    },
+    "resumeUrl": {
+      "type": "string",
+      "title": "Resume URL"
+    },
+    "signature": {
+      "type": "string",
+      "title": "Electronic Signature"
+    },
+    "signatureDate": {
+      "type": "string",
+      "title": "Signature Date"
+    },
+    "status": {
+      "type": "string",
+      "title": "Application Status",
+      "enum": [
+        "New",
+        "Reviewing",
+        "Interview Scheduled",
+        "Hired",
+        "Not Selected"
+      ],
+      "default": "New"
+    },
+    "description": {
+      "type": "string",
+      "title": "Description",
+      "maxLength": 1000
+    }
+  },
+  "required": [
+    "firstName",
+    "lastName",
+    "email",
+    "phone",
+    "positionApplied"
+  ],
+  "rls": {
+    "create": {},
+    "read": {
+      "$or": [
+        {
+          "data.email": "{{user.email}}"
+        },
+        {
+          "user_condition": {
+            "role": "admin"
+          }
+        }
+      ]
+    },
+    "update": {
+      "$or": [
+        {
+          "data.email": "{{user.email}}"
+        },
+        {
+          "user_condition": {
+            "role": "admin"
+          }
+        }
+      ]
+    },
+    "delete": {
+      "user_condition": {
+        "role": "admin"
+      }
+    }
+  }
+}
